@@ -37,3 +37,12 @@ function category(){
     $request = $pdo->query('SELECT * FROM `category`');
     return $request->fetchAll();
 }
+
+function getCatalogueElements () 
+{
+    global $pdo;
+    
+    $request = $pdo->query('SELECT * FROM movie LIMIT 3');
+
+    return $request->fetchAll(); // retourne tous les résultats
+}
